@@ -3,7 +3,7 @@ package com.example.demo.bussineslayer;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class HelloListenerTwo implements ApplicationListener<HelloEvent> {
 
     @Override
