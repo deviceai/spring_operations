@@ -9,4 +9,9 @@ public class AnnotationListener {
     public void handleEvent(HelloEvent event){
         System.out.println("The event occurred with the message " + event.getMessage());
     }
+
+    @EventListener
+    public void handleEventTwo(PojoEvent event){
+        System.out.println("POJO event is being handled...");
+    }
 }

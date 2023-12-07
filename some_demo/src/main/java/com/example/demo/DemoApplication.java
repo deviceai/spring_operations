@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import com.example.demo.bussineslayer.HelloEvent;
+import com.example.demo.bussineslayer.PojoEvent;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -30,7 +31,7 @@ class Runner implements CommandLineRunner {
 		HelloEvent event = new HelloEvent(this, "Hello Event");
 		eventPublisher.publishEvent(event);
 		Thread.sleep(500);
-		eventPublisher.publishEvent(event);
+		eventPublisher.publishEvent(new PojoEvent());
 		System.out.println("The application was ended");
 	}
 }
